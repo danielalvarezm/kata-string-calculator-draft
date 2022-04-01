@@ -40,7 +40,7 @@ describe('The kata string calculator should', () => {
     expect(calculator.sum('4,2,10')).toBe(16);
   });
 
-  it('give the sum of more an undefinite amount of numbers separated by \n', () => {
+  it('give the sum of more an undefinite amount of numbers separated by \\n', () => {
     const calculator = new StringCalculator();
 
     expect(calculator.sum('1\n1\n1')).toBe(3);
