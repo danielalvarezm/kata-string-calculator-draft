@@ -14,4 +14,12 @@ describe('The kata string calculator should', () => {
 
     expect(calculator.sum('')).toBe(0);
   });
+
+  it('give the sum of two numbers delimited by comma', () => {
+    const calculator = new StringCalculator();
+
+    expect(calculator.sum('1,1')).toBe(2);
+    expect(calculator.sum('2,1')).toBe(3);
+    expect(calculator.sum('4,2')).toBe(6);
+  });
 });
