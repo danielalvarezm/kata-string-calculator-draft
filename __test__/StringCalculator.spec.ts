@@ -61,4 +61,11 @@ describe('The kata string calculator should', () => {
     expect(calculator.sum('//;\n1;1;1')).toBe(3);
     expect(calculator.sum('///\n4/2/10')).toBe(16);
   });
+
+  it('give the sum of more an undefinite amount of numbers separated by some delimiters specified', () => {
+    const calculator = new StringCalculator();
+
+    expect(calculator.sum('//;/\n1;1/1')).toBe(3);
+    expect(calculator.sum('///;\n4;2/10')).toBe(16);
+  });
 });
