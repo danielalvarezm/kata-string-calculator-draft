@@ -1,5 +1,8 @@
 import { StringCalculator } from '../src/StringCalculator';
 
+/**
+ * 
+ */
 describe('The kata string calculator should', () => {
   it('give as result the same number', () => {
     const calculator = new StringCalculator();
@@ -22,4 +25,5 @@ describe('The kata string calculator should', () => {
     expect(calculator.sum('2,1')).toBe(3);
     expect(calculator.sum('4,2')).toBe(6);
   });
+
 });
