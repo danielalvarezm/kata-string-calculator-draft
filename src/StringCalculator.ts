@@ -7,7 +7,11 @@ export class StringCalculator {
 
     if (numbersString.startsWith('//')) {
         this.delimiter = numbersString.slice(2, numbersString.indexOf('\n'));
+        if ((numbersString.indexOf('\n') - 2) > 1) {
+            this.delimiter = new RegExp(`/[${this.delimiter}]/`);  
+        }
         numbersString = numbersString.slice(numbersString.indexOf('\n'));
+        console.log(numbersString);
     }
 
     if (!numbersString.match(this.delimiter)) {
