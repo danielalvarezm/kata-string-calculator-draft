@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export class StringCalculator {
   private delimiter = ',';
 
@@ -8,7 +9,12 @@ export class StringCalculator {
       return Number.parseInt(numbersString);
     }
 
-    const numbersArray = numbersString.split(',');
-    return Number.parseInt(numbersArray[0]) + Number.parseInt(numbersArray[1]);
+    const numbersArray = numbersString.split(',').map((numberAsString)=>Number.parseInt(numberAsString));
+    
+    const numbers: number = numbersArray.reduce((previous, current) => {
+      return previous + current;
+    });
+
+    return numbers;
   }
 }
