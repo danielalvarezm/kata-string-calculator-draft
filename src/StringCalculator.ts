@@ -1,9 +1,14 @@
 /* eslint-disable prettier/prettier */
 export class StringCalculator {
-  private delimiter = /[,\n]/;
+  private delimiter: string|RegExp = /[,\n]/;
 
   public sum(numbersString: string): number {
     if (numbersString === '') return 0;
+
+    if (numbersString.startsWith('//')) {
+        this.delimiter = numbersString.slice(2, numbersString.indexOf('\n'));
+        numbersString = numbersString.slice(numbersString.indexOf('\n'));
+    }
 
     if (!numbersString.match(this.delimiter)) {
       return Number.parseInt(numbersString);
