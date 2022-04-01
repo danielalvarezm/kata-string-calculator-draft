@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 export class StringCalculator {
-  // Regex expresion with delimiters: ",\n"
   private delimiter = /[,\n]/;
 
   public sum(numbersString: string): number {
