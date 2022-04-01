@@ -8,4 +8,10 @@ describe('The kata string calculator should', () => {
     expect(calculator.sum('3')).toBe(3);
     expect(calculator.sum('10')).toBe(10);
   });
+
+  it('give zero as result for empty string', () => {
+    const calculator = new StringCalculator();
+
+    expect(calculator.sum('')).toBe(0);
+  });
 });
