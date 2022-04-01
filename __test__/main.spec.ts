@@ -1,8 +1,8 @@
-import { Main } from '../src/main';
+import { StringCalculator } from '../src/StringCalculator';
 
-describe('Default test', () => {
-  it('should work', () => {
-    const main = new Main('Hello world');
-    expect(main.getParam()).toBe('Hello world');
+describe('The kata string calculator should', () => {
+  it('give as result the same number', () => {
+    const calculator = new StringCalculator();
+    expect(calculator.sum('1')).toBe(1);
   });
 });
